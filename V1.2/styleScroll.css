@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.section{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.section:nth-child(1){background-color: lightblue;}
+.section:nth-child(2){background-color: yellow;}
+.section:nth-child(3){background-color: green;}
+.section:nth-child(4){background-color: darkred;}
+.section:nth-child(5){background-color: violet;}
