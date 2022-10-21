@@ -1,0 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #1d1e31;
+}
+
+/* Afficher ma navbar et la bloquer en haut */
+.sectionNavbar{
+    margin-top: 3%;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+@media (max-width : 700px) {
+    .sectionNavbar{
+        margin-top: 8%;
+    }
+}
+
+/* Chaque partie (Profil...) */
+section{
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.conteneur{
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    background-color: #1d1e31;
+}
