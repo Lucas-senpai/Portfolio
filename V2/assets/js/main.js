@@ -3,7 +3,6 @@ const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
     navClose = document.getElementById('nav-close')
 
-
 /* ===== Montrer menu ===== */
 /* ===== Valide si la constante existe ===== */
 if(navToggle){
@@ -12,7 +11,6 @@ if(navToggle){
     })
 }
 
-
 /* ===== Cacher menu ===== */
 /* Valide si la constante existe */
 if(navClose){
@@ -20,7 +18,6 @@ if(navClose){
         navMenu.classList.remove('show-menu')
     })
 }
-
 
 /* ===== Cache le menu sur mobile ===== */
 const navLink = document.querySelectorAll('.nav__link')
@@ -52,6 +49,7 @@ skillsHeader.forEach((el) =>{
     el.addEventListener('click', toggleSkills)
 })
 
+
 /* ===== Qualification tabs ===== */
 const tabs = document.querySelectorAll('[data-target]'),
         tabContents = document.querySelectorAll('[data-content]')
@@ -69,5 +67,29 @@ tabs.forEach(tab =>{
             tab.classList.remove('qualification__active')
         })
         tab.classList.add('qualification__active')
+    })
+})
+
+
+/* ===== Services Modal ===== */
+const modalViews = document.querySelectorAll('.services__modal'),
+        modalBtns = document.querySelectorAll('.services__button'),
+        modalCloses = document.querySelectorAll('.services__modal-close')
+
+let modal = function(modalClick){
+    modalViews[modalClick].classList.add('active-modal')
+}
+
+modalBtns.forEach((modalBtn, i) => {
+    modalBtn.addEventListener('click', () =>{
+        modal(i)
+    })
+})
+
+modalCloses.forEach((modalClose) => {
+    modalClose.addEventListener('click', () =>{
+        modalViews.forEach((modalView) =>{
+            modalView.classList.remove('active-modal')
+        })
     })
 })
