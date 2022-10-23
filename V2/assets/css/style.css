@@ -103,6 +103,26 @@ img{
     height: auto;
 }
 
+/* Custom ScrollBar
+@media screen and (min-width: 650px) {
+
+    /* Firefox 
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--first-color) var(--container-color);
+    }
+
+    /* Chrome... 
+    ::-webkit-scrollbar{
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background: var(--first-color);
+        border-radius: 10px;
+    }
+}
+*/
 
 /* ===== Classe CSS réutilisable ===== */
 .section{
