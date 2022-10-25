@@ -1286,3 +1286,102 @@ img{
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+
+.color__button{
+    font-size: 1.1rem;
+    color: var(--title-color);
+    margin-right: var(--mb-1);
+    cursor: pointer;
+}
+
+.color__button:hover{
+    color: var(--first-color);
+}
+
+.color__modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    z-index: var(--z-modal);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.color__modal-content{
+    position: relative;
+    background-color: var(--container-color);
+    padding: 1.5rem;
+    border-radius: 20px;
+}
+
+.color__modal-services{
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 0.2rem;
+}
+
+.color__modal-service{
+    display: flex;
+    align-items: center;
+}
+
+.color__modal-services li{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+#red{
+    background-color: hsl(0, 69%, 61%);
+}
+#green{
+    background-color: hsl(140, 69%, 61%);
+}
+#violet{
+    background-color: hsl(250, 69%, 61%);
+}
+#blue{
+    background-color: hsl(220, 69%, 61%);
+}
+#pink{
+    background-color: hsl(290, 69%, 61%);
+}
+
+.color__modal-services li:hover{
+    transform: scale(1.1);
+}
+
+.color__modal-title{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1-5);
+    text-align: center;
+}
+
+.color__modal-close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--first-color);
+    cursor: pointer;
+}
+.color__modal-close:hover{
+    color: var(--first-color-alt);
+    cursor: pointer;
+}
+
+/* Avtive couleur Modal */
+.color-active-modal{
+    opacity: 1;
+    visibility: visible;
+}

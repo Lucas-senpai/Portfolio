@@ -94,6 +94,49 @@ modalCloses.forEach((modalClose) => {
     })
 })
 
+/* ===== Switch color theme window ===== */
+const colorViews = document.querySelectorAll('.color__modal'),
+        colorBtns = document.querySelectorAll('.color__button'),
+        colorCloses = document.querySelectorAll('.color__modal-close')
+
+let colormodal = function(modalClick){
+    colorViews[modalClick].classList.add('color-active-modal')
+}
+
+colorBtns.forEach((colorBtn, i) => {
+    colorBtn.addEventListener('click', () =>{
+        colormodal(i)
+    })
+})
+
+colorCloses.forEach((colorClose) => {
+    colorClose.addEventListener('click', () =>{
+        colorViews.forEach((colorView) =>{
+            colorView.classList.remove('color-active-modal')
+        })
+    })
+})
+
+/* ===== Switch color theme ===== */
+var color1 = document.getElementById('red'),
+    color2 = document.getElementById('green'),
+    color3 = document.getElementById('violet'),
+    color4 = document.getElementById('blue'),
+    color5 = document.getElementById('pink');
+
+window.onload = function(){
+    color1.onclick = changecolor;
+    color2.onclick = changecolor;
+    color3.onclick = changecolor;
+    color4.onclick = changecolor;
+    color5.onclick = changecolor;
+}
+
+function changecolor(){
+    let color = this.getAttribute('data-color');
+    document.querySelector(':root').style.setProperty('--hue-color', color)
+}
+
 
 /* ===== Portfolio Swiper ===== */
 let swiperPortfolio = new Swiper('.portfolio__container', {
