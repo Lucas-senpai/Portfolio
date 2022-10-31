@@ -4,8 +4,8 @@
 :root{
     --header-height: 3rem;
 
-    /* ===== Couleur: violet 250 - vert 142 - bleu 230 - rose 340 - rouge 0 ===== */
-    --hue-color: 250; 
+    /* ===== Couleur: violet 250 - vert 140 - bleu 220 - rose 290 - rouge 0 ===== */
+    --hue-color: 220; 
 
     /* ===== HSL Couleur ===== */
     --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -108,6 +108,11 @@ html{
 }
 ::-webkit-scrollbar{
     display: none;
+}
+
+::selection{
+    background: var(--first-color);
+    color: #fff;
 }
 
 body{
